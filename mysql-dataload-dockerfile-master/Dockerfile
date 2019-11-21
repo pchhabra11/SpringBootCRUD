@@ -9,5 +9,5 @@ ENV MYSQL_DATABASE titanicNew
 COPY CreateTable.sql /docker-entrypoint-initdb.d/
 
 # Copy the csv file to /var/lib/mysql-files/ 
-COPY titanic.csv /var/lib/mysql-files/
+COPY person.csv /var/lib/mysql-files/
 

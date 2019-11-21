@@ -46,7 +46,7 @@ case $CMD in
         sleep 10
 
         echo "Loading database data"
-        docker exec -it $CONTAINER_NAME mysql -p$MYSQL_ROOT_PASSWORD $DATABASE_NAME -e "LOAD DATA LOCAL INFILE 'var/lib/mysql-files/titanic.csv' INTO TABLE titanic FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
+        docker exec -it $CONTAINER_NAME mysql -p$MYSQL_ROOT_PASSWORD $DATABASE_NAME -e "LOAD DATA LOCAL INFILE 'var/lib/mysql-files/person.csv' INTO TABLE person FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
 
         ;;
     stop)

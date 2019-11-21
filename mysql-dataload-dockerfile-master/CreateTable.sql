@@ -1,4 +1,4 @@
-CREATE TABLE titanic (
+CREATE TABLE person (
 survived boolean,   
 passengerClass int,   
 name varchar(100),   
