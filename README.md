@@ -1,4 +1,4 @@
-# SpringBootCRUD
+# SpringBootCRUD with MySQL and REST APIs on Docker
 
 # STEP 1
 
