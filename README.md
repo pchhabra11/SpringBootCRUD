@@ -22,3 +22,6 @@ Build and run the application as a docker container
 
 - docker build . -t crudapi
 - docker run --rm --network=sqlNetwork --link=my-database -p 8080:8080 -td crudapi
+
+# STEP 5
+Import Collection from Postman_Requests_Collection/ directory to Postman and run the requests to perform all the API operations.
