@@ -1,0 +1,108 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringBootCRUD_API_Collection",
+		"_postman_id": "11288be0-b4f9-506c-6bb0-a652be130f3d",
+		"description": "API requests for CRUD operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_PERSON_BY_ID",
+			"request": {
+				"url": "http://localhost:8080/people/ddea1387-92d3-46f8-b7db-d017116bedcd",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET_PERSON_BY_ID"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_PERSON",
+			"request": {
+				"url": "http://localhost:8080/people/6de96e75-60e7-4b5d-80d2-26232e2430c3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delete person through the given UUID"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_PERSON_OBJECT",
+			"request": {
+				"url": "http://localhost:8080/people/ddea1387-92d3-46f8-b7db-d017116bedcd",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"survived\": null,\n        \"passengerClass\": 222,\n        \"name\": \"GHI\",\n        \"sex\": null,\n        \"age\": 2,\n        \"siblingsOrSpousesAboard\": null,\n        \"parentsOrChildrenAboard\": 2,\n        \"fare\": 22\n    }"
+				},
+				"description": "Update the person data "
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_PERSON_DATA",
+			"request": {
+				"url": "http://localhost:8080/people",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET_ALL_PERSON_DATA"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_PERSON_DATA",
+			"request": {
+				"url": "http://localhost:8080/people",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"age\": 3,\n  \"fare\": 232,\n  \"name\": \"DEF\",\n  \"parentsOrChildrenAboard\": 23,\n  \"passengerClass\": 23,\n  \"sex\": \"female\",\n  \"siblingsOrSpousesAboard\": 23,\n  \"survived\": false\n}"
+				},
+				"description": "CREATE_PERSON_DATA"
+			},
+			"response": []
+		}
+	]
+}
