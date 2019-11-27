@@ -56,10 +56,13 @@ public class PeopleService {
         Person person = new Person();
         person.setAge(pd.getAge());
         person.setFare(pd.getFare());
-        person.setUuid(UUID.randomUUID());
+        //person.setUuid(UUID.randomUUID());
         person.setName(pd.getName());
         person.setParentsOrChildrenAboard(pd.getParentsOrChildrenAboard());
         person.setPassengerClass(pd.getPassengerClass());
+        person.setSurvived(pd.isSurvived());
+        person.setSiblingsOrSpousesAboard(pd.getSiblingsOrSpousesAboard());
+        person.setSex(pd.getSex());
         LOGGER.debug("Person Object created with uuid  {} ", person.getUuid());
         LOGGER.info("Exiting getPersonFromPersonData Method...");
         return person;

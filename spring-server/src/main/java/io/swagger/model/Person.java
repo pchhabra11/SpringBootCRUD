@@ -1,20 +1,17 @@
 package io.swagger.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.PersonData;
-import java.math.BigDecimal;
-import java.util.UUID;
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.validation.annotation.Validated;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import java.util.Objects;
+import java.util.UUID;
 
 /**
  * Person
@@ -25,6 +22,9 @@ import javax.validation.constraints.*;
 @Entity
 public class Person extends PersonData  {
   @JsonProperty("uuid")
+  @GeneratedValue(generator = "uuid2")
+  @GenericGenerator(name = "uuid2", strategy = "uuid2")
+  @Column(columnDefinition = "BINARY(16)")
   @Id
   private UUID uuid = null;
 
